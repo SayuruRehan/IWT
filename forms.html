@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Registration</title>
+  </head>
+  <body>
+    <h3>Online TAXI</h3>
+    <form method="post" action="meg.php">
+      <fieldset>
+        <legend>Contact Details</legend>
+
+        <p>
+          Contact Name <input type="text" id="styNo" name="fname" required />
+        </p>
+        <p>
+          Customer phone number
+          <input type="text" name="phoneNO" required />
+        </p>
+        <p>Email <input type="email" name="email" required /></p>
+
+        <p>Pick up address</p>
+        <textarea rows="3" cols="50" id="stuAddr" required></textarea>
+      </fieldset>
+      <br />
+      <fieldset>
+        <input />
+        <legend>Vehicle Details</legend>
+        <p>Vehicle type</p>
+        <select name="vehicleType">
+          <option value="jeep">Jeep</option>
+          <option value="van">Van</option>
+          <option value="car">Car</option>
+          <option value="bike">Bike</option>
+          <option value="bus">Bus</option>
+        </select>
+        <p>Air condition</p>
+        <input type="radio" name="numberOfSub" value="1" id="ac" required />
+        with AC
+        <input type="radio" name="numberOfSub" value="2" id="ac" required />
+        without AC
+        <input type="radio" name="numberOfSub" value="3" id="ac" required />
+        little bit AC
+        <input type="radio" name="numberOfSub" value="4" id="ac" required />
+        high AC
+        <p>Tour staff</p>
+        <input type="checkbox" name="wDriver" value="withDriver" />with Driver
+        <input type="checkbox" name="wDriver" value="Tour guide" />Tour guide
+      </fieldset>
+
+      <fieldset>
+        <legend>Trip date</legend>
+        <p>
+          starting date <input type="date" name="start_date" /> Time
+          <input type="start_time" />
+        </p>
+        <p>
+          End date <input type="date" name="end_date" /> Time
+          <input type="end_time" />
+        </p>
+      </fieldset>
+      <br />
+      <button name="submitBtn">Submit</button>
+      <button name="cancelBtn">Cancel</button>
+    </form>
+  </body>
+</html>
