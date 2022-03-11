@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script src="js/myScript.js"></script>
+  </head>
+
+  <body>
+    <img class="logo" src="images/cart.png" width="200" height="200" alt="Shopping Cart "
+    <center>
+      <h1>ABC Mobiles</h1>
+      <h3 id="header">The Online Shopping Store</h3>
+    <hr id="test"/>
+    </center>
+
+    <ul class = "menu">
+      <li class="menu"><a href = "index.html">Home</a></li>
+      <li class="menu"><a href = "news.html">News</a></li>
+      <li class="menu"><a href = "#">Contact</a></li>
+      <li class="menu"><a href = "https://courseweb.sliit.lk/">About Us</a></li>
+    </ul>
+
+    <form action="#">
+      First Name:<br/>
+      <input type="text" name="firstname" value="First Name" required<br/><br/>
+      Last Name:<br/>
+      <input type="text" name="lastname" placeholder="Last Name" required<br/><br/>
+      Gender:<br/>
+      <input type="radio" name="gender" checked>Male
+      <input type="radio" name="gender" >Female
+
+      Mobile Number:<br/>
+      <input type="phone" name="mobile" pattern="[0-9]{10}" placeholder="1234567890" required> <br/><br/>
+
+      Email:<br/>
+      <input type="email" name="email" placeholder="abc@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}" required<br/><br/>
+
+      Address:<br/>
+      <textarea name="address" rows="8" cols="50" required></textarea> <br/><br/>
+      Choose your DOB:<br/>
+      <input type="date" name="day" required><br/><br/>
+
+      Password:<br/>
+      <input type="password" id="pwd" pattern="(?=.+\d)(?=.+[a-z])(?=.+[A-Z]).{5,10}" required> <br/><br/>
+
+      Re-Enter Password:<br/>
+      <input type="password" id="chfrmpwd" required><br/><br/>
+
+      <br><input type="checkbox" class="inputStyle" id="checkBox" onclick="enableButton()">Accept privacy policy and terms<br/></br>
+      <center><input type="submit" id="submitBtn" value="Submit" disabled></center>
+        
+    </form>
+
+      <h3 style = "font-weight: bold; font-style: italic;">Created By: <a href="https://courseweb.sliit.lk/"
+    </center>
+  </body>
+</html>
