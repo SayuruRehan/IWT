@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Arrays</h2>
+<p>The best way to loop through an array is using a standard for loop:</p>
+<p id="demo"></p>
+<script>
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[1] = "Grapes";
+fruits[4] = "Avocado";
+fruits[5] = "Pineapple";
+  
+fLen = fruits.length;
+for (i = 0; i < fLen; i++) {
+  if (i == 4)
+    continue;
+document.write(fruits[i]+"</br>");
+}
+</script>
+</body>
+</html>
