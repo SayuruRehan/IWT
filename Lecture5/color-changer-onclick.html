@@ -1,0 +1,21 @@
+
+<html>
+     <title>Introduction to events - A_simple_example - code sample</title>
+    </head>
+    <body>
+       <button>Change color</button>
+	   <button id="ClickMe"> Click Me </button>
+             <script>
+              var click = document.getElementById("ClickMe");
+function random(number) {
+  return Math.floor(Math.random() * (number+1));
+}
+
+click.onclick = function() {
+  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
+}
+            </script>
+        
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+  <head></head>
+  <body>
+    <form>
+      Please Enter your First Name <input type="text" id="firstName" name="Firstn">
+      <br>
+      <br>
+      <div id="divOutput"></div>
+      <input type = "submit" name ="Submit" onclick="submitValue()">
+    </form>
+    <script>
+      function submitValue() {
+        var name = document.getElementById("firstName").value;
+        var name = document.getElementByName("Firstn").value;
+        
+        //display output
+        document.getElementById("divOutput").innerHTML = "Hello" + name;
+      }      
+    </script>
+  </body>
+</html>
+
