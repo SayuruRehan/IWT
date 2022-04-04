@@ -1,4 +1,5 @@
 Object Initialization
+=====================
 
 To create a new object, use the new statement to instantiate a class:
 
@@ -18,6 +19,7 @@ $bar->do_foo();
 
 
 Converting to object
+=============================
 
 If an object is converted to an object, it is not modified. If a value of any other type is converted to an object, a new instance of the stdClass built-in class is created. If the value was null, the new instance will be empty. An array converts to an object with properties named by keys and corresponding values. 
 
