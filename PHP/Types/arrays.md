@@ -200,7 +200,7 @@ array(7) {
   [2]=>
   string(1) "l"
 }
-Accessing array elements with square bracket syntax ¶
+Accessing array elements with square bracket syntax 
 Array elements can be accessed using the array[key] syntax.
 
 Example #7 Accessing array elements
@@ -250,7 +250,7 @@ Note:
 
 Array dereferencing a scalar value which is not a string yields null. Prior to PHP 7.4.0, that did not issue an error message. As of PHP 7.4.0, this issues E_NOTICE; as of PHP 8.0.0, this issues E_WARNING.
 
-Creating/modifying with square bracket syntax ¶
+Creating/modifying with square bracket syntax 
 An existing array can be modified by explicitly setting values in it.
 
 This is done by assigning values to the array, specifying the key in brackets. The key can also be omitted, resulting in an empty pair of brackets ([]).
@@ -364,6 +364,7 @@ echo $foo[bar];
 This is wrong, but it works. The reason is that this code has an undefined constant (bar) rather than a string ('bar' - notice the quotes). It works because PHP automatically converts a bare string (an unquoted string which does not correspond to any known symbol) into a string which contains the bare string. For instance, if there is no defined constant named bar, then PHP will substitute in the string 'bar' and use that.
 
 Warning
+=============
 The fallback to treat an undefined constant as bare string issues an error of level E_NOTICE. This has been deprecated as of PHP 7.2.0, and issues an error of level E_WARNING. As of PHP 8.0.0, it has been removed and throws an Error exception.
 
 Note: This does not mean to always quote the key. Do not quote keys which are constants or variables, as this will prevent PHP from interpreting them.
@@ -472,7 +473,8 @@ At some point in the future, the PHP team might want to add another constant or 
 
 Note: To reiterate, inside a double-quoted string, it's valid to not surround array indexes with quotes so "$foo[bar]" is valid. See the above examples for details on why as well as the section on variable parsing in strings.
 
-Converting to array ¶
+Converting to array 
+======================
 For any of the types int, float, string, bool and resource, converting a value to an array results in an array with a single element with index zero and the value of the scalar which was converted. In other words, (array)$scalarValue is exactly the same as array($scalarValue).
 
 If an object is converted to an array, the result is an array whose elements are the object's properties. The keys are the member variable names, with a few notable exceptions: integer properties are unaccessible; private variables have the class name prepended to the variable name; protected variables have a '*' prepended to the variable name. These prepended values have NUL bytes on either side. Uninitialized typed properties are silently discarded.
@@ -597,6 +599,7 @@ $arr6 = [...$arr4, ...$arr5]; // works. [1, 2, 3, 4, 5]
 ?>
 
 Examples 
+==============
 
 The array type in PHP is very versatile. Here are some examples:
 
@@ -629,6 +632,7 @@ $b[] = 'c';
 // 'name' => 'apple', 0 => 4), and $b will be the array 
 // array(0 => 'a', 1 => 'b', 2 => 'c'), or simply array('a', 'b', 'c').
 ?>
+
 Example #11 Using array()
 
 <?php
@@ -715,6 +719,7 @@ Array
     [2] => 'February'
     [3] => 'March'
 )
+
 Example #15 Filling an array
 
 <?php
@@ -763,6 +768,7 @@ unset($fruits["holes"][0]);  // remove "first"
 // Create a new multi-dimensional array
 $juices["apple"]["green"] = "good"; 
 ?>
+
 Array assignment always involves value copying. Use the reference operator to copy an array by reference.
 
 <?php
