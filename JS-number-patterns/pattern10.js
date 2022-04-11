@@ -1,4 +1,4 @@
-let n = 5;
+let n = 5;    //assignment
 let string = "";
 // Pyramid
 for (let i = 1; i <= n; i++) {
