@@ -1,4 +1,5 @@
 Type declarations 
+============================
 
 Type declarations can be added to function arguments, return values, and, as of PHP 7.4.0, class properties. They ensure that the value is of the specified type at call time, otherwise a TypeError is thrown.
 
@@ -7,7 +8,7 @@ Note:
 When overriding a parent method, the child's method must match any return type declaration on the parent. If the parent doesn't define a return type, then the child method may do so.
 
 Single types 
-
+====================
 Type	Description	Version
 Class/interface name	The value must be an instanceof the given class or interface.	 
 self	The value must be an instanceof the same class as the one in which the type declaration is used. Can only be used in classes.	 
@@ -44,7 +45,7 @@ mixed
 mixed is equivalent to the union type object|resource|array|string|int|float|bool|null. Available as of PHP 8.0.0.
 
 Examples 
-
+====================
 Example #1 Basic class type declaration
 
 <?php
@@ -128,7 +129,7 @@ object(C)#1 (0) {
 
 
 Nullable type 
-
+=======================
 As of PHP 7.1.0, type declarations can be marked nullable by prefixing the type name with a question mark (?). This signifies that the value can be of the specified type or null.
 
 Example #5 Nullable argument type declaration
@@ -149,7 +150,7 @@ object(C)#1 (0) {
 }
 
 NULL
-
+=============
 Example #6 Nullable return type declaration
 
 <?php
@@ -191,11 +192,11 @@ Caution
 It is not possible to combine intersection types with union types.
 
 Union types 
-
+===========================
 A union type declaration accepts values of multiple different simple types, rather than a single one. Union types are specified using the syntax T1|T2|.... Union types are available as of PHP 8.0.0.
 
 Nullable union types
-
+============================
 The null type is supported as part of unions, such that T1|T2|null can be used to create a nullable union. The existing ?T notation is considered a shorthand for the common case of T|null.
 
 Caution
@@ -211,12 +212,12 @@ Caution
 The true literal type does not exist.
 
 Intersection types 
-
+============================
 An intersection type declaration accepts values which satisfies multiple class-type declarations, rather than a single one. Intersection types are specified using the syntax T1&T2&.... Intersection types are available as of PHP 8.1.0.
 
 
 Duplicate and redundant types 
-
+===================================
 To catch simple bugs in composite type declarations, redundant types that can be detected without performing class loading will result in a compile-time error. This includes:
 
 Each name-resolved type may only occur once. Types such as int|string|INT or Countable&Traversable&COUNTABLE result in an error.
@@ -248,7 +249,7 @@ function foo(): X&Y {} // Allowed (redundancy is only known at runtime)
 ?>
 
 Return only types 
-
+==========================
 void 
 
 void is a return type indicating the function does not return a value. Therefore it cannot be part of a union type declaration. Available as of PHP 7.1.0.
@@ -273,7 +274,7 @@ static
 The value must be an instanceof the same class as the one the method is called in. Available as of PHP 8.0.0.
 
 Strict typing 
-
+========================
 By default, PHP will coerce values of the wrong type into the expected scalar type declaration if possible. For example, a function that is given an int for a parameter that expects a string will get a variable of type string.
 
 It is possible to enable strict mode on a per-file basis. In strict mode, only a value corresponding exactly to the type declaration will be accepted, otherwise a TypeError will be thrown. The only exception to this rule is that an int value will pass a float type declaration.
