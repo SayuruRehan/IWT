@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileFieldName"]["name"]);
+if(isset($_FILES["fileFieldName"])) {
+if (move_uploaded_file($_FILES["fileFieldName"]["tmp_name"],$target_file)){
+echo "The file ". basename( $_FILES["fileFieldName"]["name"]). " is uploaded.";
+} 
+else {
+echo "Error while uploading your file."; 
+}
+}else{
+echo "File not available"; 
+}
+?>
+</body>
