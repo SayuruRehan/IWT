@@ -20,6 +20,7 @@ if($result->num_rows > 0)
 
       //Ex1-Lab9
       echo "<td><button type="submit"><a href='editRecord.php?id=$id'>Edit</a></button></td>";
+      echo "<td><button type="submit" onclick='delete_data($id)'>Deleted</button></td>";
       echo "</tr>";      
     }
 }

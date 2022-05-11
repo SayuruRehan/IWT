@@ -13,6 +13,7 @@ $sql = "UPDATE item SET Item_name = '$name', Item_description = '$desc', Price =
 
 if($conn->query($sql)){
   echo "<script> alert('Records updated successfully!!!')</script>";
+  header("location: index.php");
 }
 else{
   echo "<script> alert('ERROR: Could not execute the query!!!')</script>";
